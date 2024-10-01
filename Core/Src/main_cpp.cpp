@@ -9,9 +9,10 @@
 
 extern "C" void main_cpp(void)
 {
+	Queue *q = new Queue();
+	// Application *app = new Application();
 	OutputDriver *output = new OutputDriver();
-	InputDriver *input = new InputDriver();
-	Application *app = new Application();
+	// InputDriver *input = new InputDriver();
 
 
 	while(1)
