@@ -4,7 +4,10 @@
  *  Created on: Oct 1, 2024
  *      Author: Tyler Hartleroad
  */
-
+#include "OutputDriver.h"
+#include "Application.h"
+#include "Queue.h"
+#include "IPCsemaphore.h"
 
 
 extern "C" void main_cpp(void)
@@ -18,7 +21,7 @@ extern "C" void main_cpp(void)
 	while(1)
 	{
 		output->Update();
-		input->Update();
+		// input->Update();
 	}
 }
 

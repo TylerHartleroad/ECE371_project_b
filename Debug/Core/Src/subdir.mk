@@ -5,7 +5,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../Core/Src/Gabe.cpp 
+../Core/Src/Application.cpp \
+../Core/Src/Gabe.cpp \
+../Core/Src/IPCsemaphore.cpp \
+../Core/Src/OutputDriver.cpp \
+../Core/Src/Queue.cpp \
+../Core/Src/main_cpp.cpp 
 
 C_SRCS += \
 ../Core/Src/main.c \
@@ -24,8 +29,13 @@ C_DEPS += \
 ./Core/Src/system_stm32l4xx.d 
 
 OBJS += \
+./Core/Src/Application.o \
 ./Core/Src/Gabe.o \
+./Core/Src/IPCsemaphore.o \
+./Core/Src/OutputDriver.o \
+./Core/Src/Queue.o \
 ./Core/Src/main.o \
+./Core/Src/main_cpp.o \
 ./Core/Src/stm32l4xx_hal_msp.o \
 ./Core/Src/stm32l4xx_it.o \
 ./Core/Src/syscalls.o \
@@ -33,7 +43,12 @@ OBJS += \
 ./Core/Src/system_stm32l4xx.o 
 
 CPP_DEPS += \
-./Core/Src/Gabe.d 
+./Core/Src/Application.d \
+./Core/Src/Gabe.d \
+./Core/Src/IPCsemaphore.d \
+./Core/Src/OutputDriver.d \
+./Core/Src/Queue.d \
+./Core/Src/main_cpp.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -45,7 +60,7 @@ Core/Src/%.o Core/Src/%.su Core/Src/%.cyclo: ../Core/Src/%.c Core/Src/subdir.mk
 clean: clean-Core-2f-Src
 
 clean-Core-2f-Src:
-	-$(RM) ./Core/Src/Gabe.cyclo ./Core/Src/Gabe.d ./Core/Src/Gabe.o ./Core/Src/Gabe.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32l4xx_hal_msp.cyclo ./Core/Src/stm32l4xx_hal_msp.d ./Core/Src/stm32l4xx_hal_msp.o ./Core/Src/stm32l4xx_hal_msp.su ./Core/Src/stm32l4xx_it.cyclo ./Core/Src/stm32l4xx_it.d ./Core/Src/stm32l4xx_it.o ./Core/Src/stm32l4xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32l4xx.cyclo ./Core/Src/system_stm32l4xx.d ./Core/Src/system_stm32l4xx.o ./Core/Src/system_stm32l4xx.su
+	-$(RM) ./Core/Src/Application.cyclo ./Core/Src/Application.d ./Core/Src/Application.o ./Core/Src/Application.su ./Core/Src/Gabe.cyclo ./Core/Src/Gabe.d ./Core/Src/Gabe.o ./Core/Src/Gabe.su ./Core/Src/IPCsemaphore.cyclo ./Core/Src/IPCsemaphore.d ./Core/Src/IPCsemaphore.o ./Core/Src/IPCsemaphore.su ./Core/Src/OutputDriver.cyclo ./Core/Src/OutputDriver.d ./Core/Src/OutputDriver.o ./Core/Src/OutputDriver.su ./Core/Src/Queue.cyclo ./Core/Src/Queue.d ./Core/Src/Queue.o ./Core/Src/Queue.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/main_cpp.cyclo ./Core/Src/main_cpp.d ./Core/Src/main_cpp.o ./Core/Src/main_cpp.su ./Core/Src/stm32l4xx_hal_msp.cyclo ./Core/Src/stm32l4xx_hal_msp.d ./Core/Src/stm32l4xx_hal_msp.o ./Core/Src/stm32l4xx_hal_msp.su ./Core/Src/stm32l4xx_it.cyclo ./Core/Src/stm32l4xx_it.d ./Core/Src/stm32l4xx_it.o ./Core/Src/stm32l4xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32l4xx.cyclo ./Core/Src/system_stm32l4xx.d ./Core/Src/system_stm32l4xx.o ./Core/Src/system_stm32l4xx.su
 
 .PHONY: clean-Core-2f-Src
 

@@ -8,6 +8,8 @@
 #ifndef INC_QUEUE_H_
 #define INC_QUEUE_H_
 
+#include <stdint.h>
+
 class Queue
 {
 public:

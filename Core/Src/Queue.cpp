@@ -4,6 +4,7 @@
  *  Created on: Oct 1, 2024
  *      Author: tdhar
  */
+#include "Queue.h"
 
 Queue::Queue(void)
 {

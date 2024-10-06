@@ -8,6 +8,8 @@
 #ifndef INC_OUTPUTDRIVER_H_
 #define INC_OUTPUTDRIVER_H_
 
+#include "main.h"
+
 class OutputDriver
 {
 public:
