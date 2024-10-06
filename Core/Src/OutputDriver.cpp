@@ -6,10 +6,13 @@
  */
 #include "OutputDriver.h"
 
+DAC_TypeDef hdac1;
+
 OutputDriver::OutputDriver(void)
 {
-	// Enable DAC1
-
+	// Enable DAC1 and DAC2
+	DAC->CR |= (1<<0) | (1<<16);
+	DAC->DHR12RD |= (4095U << 0) | (4095U << 16);
 }
 
 
