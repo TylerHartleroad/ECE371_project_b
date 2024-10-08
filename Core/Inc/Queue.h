@@ -10,15 +10,18 @@
 
 #include <stdint.h>
 
+#define QUEUE_SIZE 10
+
 class Queue
 {
 public:
 	Queue(void);
-	bool enqueue(uint32_t msg);
-	bool dequeue(uint32_t *ptr);
+	bool enqueue(int32_t msg);
+	bool dequeue(int32_t *ptr);
 private:
-	uint32_t head;
-	uint32_t load;
+	int32_t buffer[QUEUE_SIZE];
+	uint32_t head = 0;
+	uint32_t tail = 0;
 };
 
 
